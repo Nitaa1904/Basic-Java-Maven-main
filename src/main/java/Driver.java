@@ -1,24 +1,18 @@
-import src.main.java.Counter;
+import Counter;
 
 public class Driver {
 
 	public static void main(String[] args) {
-		
-		Counter counter = new Counter();
-		
-		System.out.println("Count:" + counter.getCount());
-		
-		counter.increment();
-		
-		System.out.println("Count:" + counter.getCount());
-		
-		counter.decrement();
-		
-		System.out.println("Count:" + counter.getCount());
 
-		counter.increment();
-        System.out.println("Current count: " + counter.getCount());
-		
+		// NullPointerException potensi
+		String name = null;
+		System.out.println("Length: " + name.length());
+
+		// Infinite loop tanpa break
+		while (true) {
+			System.out.println("This is an infinite loop");
+		}
 	}
-
 }
+
+
