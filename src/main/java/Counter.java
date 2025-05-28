@@ -9,7 +9,8 @@ public class Counter {
 	}
 		
 	public void reset() {
-		count = 0;
+		// BUG: Tidak mengatur count ke 0
+		count = 100;
 	}
 	
 	public void increment() {
