@@ -24,11 +24,6 @@ jobs:
           distribution: "temurin"
           cache: maven
 
-      - name: Deploy to GitHub Packages
-        run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Create settings.xml
         run: |
           mkdir -p ~/.m2
@@ -43,3 +38,5 @@ jobs:
           </settings>" > ~/.m2/settings.xml
       - name: Deploy
         run: mvn deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
